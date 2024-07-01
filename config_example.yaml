@@ -1,0 +1,22 @@
+github_repository_cache:
+  repository_dir: /tmp/chaingpt
+
+wolfi_database:
+  os_dir: /tmp/chaingpt
+  index_dir: /tmp/chaingpt
+  rebuild_at_start: True
+
+docker_shell_environment:
+  image: cgr.dev/chainguard/wolfi-base:latest
+
+llm:
+  agent_model: gpt-4-0125-preview
+  file_qa_model: gpt-3.5-turbo-0125
+  max_file_sz: 100000
+  map_reduce:
+    chunk_sz: 8000
+    chunk_overlap: 500
+
+secrets:
+  openai_api_key: YOUR_OPENAI_API_KEY_HERE
+  github_personal_access_token: YOUR_GITHUB_TOKEN_HERE

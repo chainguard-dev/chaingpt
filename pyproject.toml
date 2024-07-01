@@ -1,0 +1,32 @@
+[build-system]
+requires = [
+    "setuptools >= 65",
+    "wheel >= 0.38"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chaingpt"
+version = "0.0.1"
+description = "An LLM agent for GitHub repositories."
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = [
+    "sh >= 2.0.6",
+    "whoosh >= 2.7.4",
+    "colorama >= 0.4.6",
+    "emoji >= 2.10.1",
+    "langchain >= 0.1.5",
+    "langchain-community >= 0.0.17",
+    "langchain-openai >= 0.0.5",
+    "openai >= 1.6.1",
+    "docker >= 7.0.0",
+    "pyyaml >= 6.0.1"
+]
+
+maintainers = [
+  {name = "Paul Gibert", email = "paulgibert98@gmail.com"}
+]
+
+[project.scripts]
+chaingpt = "chaingpt.__main__:main"
